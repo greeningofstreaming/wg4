@@ -1,6 +1,6 @@
 ## Key Metric
 
-Energy use per 15 minutes
+"Average Watts per 15min per server"
 
 ## Machine Metrics
 
