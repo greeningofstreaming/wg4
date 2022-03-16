@@ -1,0 +1,17 @@
+{
+  "id": "gos:live-event-1-providerA-20220106102020000",
+  "contextId": "live-event-1",
+  "providerId": "providerA",
+  "machineId": "host-123",
+  "startAt": "2022-01-06T10:20:20.000Z",
+  "endAt": "2022-01-06T10:20:21.000Z",
+  "origin": {
+    "fieldA": "8405828",
+    "fieldB": "asdaglkaokalkalka",
+    "fieldC": "L01035150"
+  },
+  "cost": {
+    "energy": "120",
+    "concurrency": "5"
+  }
+}
