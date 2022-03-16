@@ -1,0 +1,15 @@
+[
+  {
+    "id": "host456",
+    "providerId": "providerA",
+    "purpose": "encoder",
+    "periodStartAt": "2022-01-01T00:00:00.000Z",
+    "periodEndAt": "2022-01-31T23:59:59.999Z",
+    "location": "country:us/locality:virginia/rack:a",
+    "supplemental": {
+      "fieldA": "8405828",
+      "fieldB": "asdaglkaokalkalka",
+      "fieldC": "L01035150"
+    }
+  }
+]
