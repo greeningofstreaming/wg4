@@ -1,7 +1,0 @@
-[
-  {
-    "machineId": "host456",
-    "previousMachineId": "host123",
-    "nextMachineId": "host789"
-  }
-]

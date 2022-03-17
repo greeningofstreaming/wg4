@@ -1,0 +1,58 @@
+[
+  {
+    "eventId": "live-event-1",
+    "providerId": "cdn1",
+    "meterId": "pop-uk",
+    "startAt": "2022-01-06T10:00:00.000Z",
+    "endAt": "2022-01-06T10:14:59.999Z",
+    "metric": "joule",
+    "value": "108000",
+    "supplemental": {
+      "fieldA": "8405828",
+      "fieldB": "asdaglkaokalkalka",
+      "fieldC": "Y"
+    }
+  },
+  {
+    "eventId": "live-event-1",
+    "providerId": "cdn1",
+    "meterId": "pop-nl",
+    "startAt": "2022-01-06T10:00:00.000Z",
+    "endAt": "2022-01-06T10:14:59.999Z",
+    "metric": "joule",
+    "value": "90000",
+    "supplemental": {
+      "fieldA": "4234",
+      "fieldB": "sdsdf",
+      "fieldC": "Y"
+    }
+  },
+  {
+    "eventId": "live-event-1",
+    "providerId": "cdn1",
+    "meterId": "pop-uk",
+    "startAt": "2022-01-06T10:15:00.000Z",
+    "endAt": "2022-01-06T10:29:59.999Z",
+    "metric": "joule",
+    "value": "126000",
+    "supplemental": {
+      "fieldA": "840532534",
+      "fieldB": "afagdfsddgdsgsg",
+      "fieldC": "X"
+    }
+  },
+  {
+    "eventId": "live-event-1",
+    "providerId": "cdn1",
+    "meterId": "pop-nl",
+    "startAt": "2022-01-06T10:15:00.000Z",
+    "endAt": "2022-01-06T10:29:59.999Z",
+    "metric": "joule",
+    "value": "135000",
+    "supplemental": {
+      "fieldA": "3423526",
+      "fieldB": "gasdgdg",
+      "fieldC": "X"
+    }
+  }
+]

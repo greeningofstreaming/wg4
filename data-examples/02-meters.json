@@ -1,0 +1,29 @@
+[
+  {
+    "providerId": "cdn1",
+    "meterId": "origin-it",
+    "purpose": "IT Origin",
+    "location": "region:eu/country:it"
+  },
+  {
+    "providerId": "cdn1",
+    "meterId": "propagation",
+    "purpose": "Propagation nodes from Origin to POP",
+    "location": "region:global"
+  },
+  {
+    "providerId": "cdn1",
+    "meterId": "pop-uk",
+    "purpose": "UK Point of Presence",
+    "location": "region:eu/country:uk"
+  },
+  {
+    "providerId": "cdn1",
+    "meterId": "pop-nl",
+    "purpose": "NL Point of Presence",
+    "location": "region:eu/country:nl",
+    "supplemental": {
+      "nodes": "1500"
+    }
+  }
+]

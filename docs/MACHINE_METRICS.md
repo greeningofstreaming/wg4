@@ -1,22 +1,18 @@
-## Key Metric
+# Machine Metrics
 
-"Average Watts per 15min per server"
-
-## Machine Metrics
-
-### Intel Chipsets
+## Intel Chipsets
 
 See <https://github.com/opcm/pcm>
 
-### AMD Chipsets
+## AMD Chipsets
 
 See <https://developer.amd.com/amd-uprof/>
 
-### *nix kernel
+## *nix kernel
 
 See <https://github.com/prometheus/node_exporter>
 
-### impi compatible devices
+## impi compatible devices
 
 From a power consumption on a per-server basis, the BMC may be useful.
 

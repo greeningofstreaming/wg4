@@ -1,0 +1,32 @@
+[
+  {
+    "src": {
+      "providerId": "cdn1",
+      "meterId": "origin-it"
+    },
+    "dst": {
+      "providerId": "cdn1",
+      "meterId": "propagation"
+    }
+  },
+  {
+    "src": {
+      "providerId": "cdn1",
+      "meterId": "propagation"
+    },
+    "dst": {
+      "providerId": "cdn1",
+      "meterId": "pop-uk"
+    }
+  },
+  {
+    "src": {
+      "providerId": "cdn1",
+      "meterId": "propagation"
+    },
+    "dst": {
+      "providerId": "cdn1",
+      "meterId": "pop-nl"
+    }
+  }
+]
