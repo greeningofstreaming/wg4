@@ -6,12 +6,12 @@ The overall key metric we want to understand is `average watts per 15 minutes`.
 
 ## Measurements
 
-During each event, each provider needs to measure their energy usage and provide those measurements for analysis.
+During each event, each provider needs to measure their energy usage and deliver those measurements for analysis.
 
 For each measurement we need to know:
 
 * event - the associated event for this measurement, e.g. UEFA Cup Final
-* provider - who is providing the measurement, e.g. cdn1
+* provider - who is providing the measurement, e.g. akamai, ateme
 * meter - the providers resource(s) being measured, e.g. a device, machine, rack, data center
 * interval - the start and end period of the metered interval
 * metric - the system of measurement, e.g. joules
@@ -19,8 +19,8 @@ For each measurement we need to know:
 
 ## Meters
 
-Each provider can determine the most appropriate meters based on the knowledge of their devices, machines, networks and software.  For example, a CDN may choose to separate their network measurements into 3 key meters: origin, propagation, pop.
+Each provider can determine the most appropriate meters based on the knowledge of their devices, machines, networks, software and how granular they want to expose their topologies.  For example, a CDN may choose to separate their network measurements into 3 key meters: origin, propagation, pop.
 
 ## Topology
 
-...
+TBC
