@@ -1,15 +1,19 @@
 #!/bin/bash
 
 usage() {
-  echo "Usage: $0 <period> <provider_name> <bmc_ip_address>"
+  echo "Usage: $0 <event_id> <provider_id> <meter_id> <bmc_ip_address>"
+  echo "	- event_id: name of the measured event"
+  echo "	- provider_id: name of the provider"
+  echo "	- meter_id: name of the server"
+  echo "	- bmc_ip_address: IP address of the BMC to access via redfish API"
 }
 
-if [[ $# -ne 3 ]]; then
+if [[ $# -ne 4 ]]; then
     usage
     exit 1
 fi
 
-log_file=$2-energy-logs.json
+log_file=$2-$3-energy-logs.json
 rm -f $log_file
 
 record_date=$(date +%Y%m%d%H%M%S%N)
@@ -24,18 +28,28 @@ PATH=$PATH:~/.local/bin
 
 while :
 do
-        date=$(date --utc +%FT%T.%3NZ)
-        power=$(redfishtool -r $3 -u $login -p $password Chassis getPowerReading consumed | grep Power | awk {'print $2'})
-        sleep $1
+  start_date=$(date +%s)
+  formatted_start_date=$(date -d @$start_date +%FT%T.%3NZ)
+  echo $formatted_start_date
+  power=$(redfishtool -r $4 -u $login -p $password Chassis getPowerReading | grep AverageConsumedWatts | awk {'print $2'} | sed 's/,/ /g')
+  echo $power
+  end_date=$(date +%s)
+  while [[ $((end_date-start_date)) -lt 60 ]]
+  do
+    sleep 1
+    end_date=$(date +%s)
+  done
+  formatted_end_date=$(date -d @$end_date +%FT%T.%3NZ)
 (
 cat << EOF
 {
-        "id": "gos:test-$2-$record_date",
-        "context": "test",
-        "provider": "$2",
-        "date": "$date",
-        "metric": "watts",
-        "value": "$power"
+	"providerId": "$2",
+	"meterId": "$3",
+	"eventId": "$1",
+	"startAt": "$formatted_start_date",
+	"endAt": "$formatted_end_date",
+	"metric": "watts",
+	"value": "$power"
 },
 EOF
 ) >> $log_file
